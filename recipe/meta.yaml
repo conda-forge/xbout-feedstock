@@ -1,5 +1,5 @@
 {% set name = "xbout" %}
-{% set version = "0.2.2" %}
+{% set version = "0.2.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,19 +7,19 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: cbbcbe9a49e8e94101fcc082700ab39ba5918e9fe9422c3da02bccdf62c0aa94
+  sha256: 0063e2b8ecf5b0894c503e25c2d1f0c7c429c4e3b80b640ff31fe4e6e3b6d24a
 
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - python >=3.6.0
     - pip
   run:
-    - python
+    - python >=3.6.0
     - xarray >=0.16.0
     - boutdata >=0.1.2
     - dask >=2.10.0
