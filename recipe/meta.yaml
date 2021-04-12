@@ -1,5 +1,5 @@
 {% set name = "xbout" %}
-{% set version = "0.2.3" %}
+{% set version = "0.2.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 0063e2b8ecf5b0894c503e25c2d1f0c7c429c4e3b80b640ff31fe4e6e3b6d24a
+  sha256: 2a62b6f53ad35c3f2d99988b2f8236781773608e505646765255e8b8080d1db9
 
 build:
   noarch: python
