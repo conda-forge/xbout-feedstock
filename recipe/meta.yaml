@@ -20,7 +20,7 @@ requirements:
     - pip
   run:
     - python >=3.6.0
-    - xarray >=0.17.0
+    - xarray >=0.17.0,<0.18.0
     - boutdata >=0.1.4
     - dask >=2.10.0
     - natsort >=5.5.0
@@ -34,7 +34,6 @@ test:
   requires:
     - pytest >=3.3.0
   commands:
-    - conda install xarray==0.17.0 # temporarily downgrade xarray to avoid bug that will be fixed in xbout-0.2.5
     - pytest --pyargs xbout
 
 about:
