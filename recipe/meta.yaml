@@ -11,7 +11,7 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -20,12 +20,12 @@ requirements:
     - pip
   run:
     - python >=3.6.0
-    - xarray >=0.16.0
-    - boutdata >=0.1.2
+    - xarray >=0.17.0
+    - boutdata >=0.1.4
     - dask >=2.10.0
     - natsort >=5.5.0
     - matplotlib-base >=3.1.1
-    - animatplot >=0.4.1
+    - animatplot >=0.4.2
     - netcdf4 >=1.4.0
     - Pillow >=6.1.0
     - importlib-metadata
