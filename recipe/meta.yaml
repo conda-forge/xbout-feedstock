@@ -34,6 +34,7 @@ test:
   requires:
     - pytest >=3.3.0
   commands:
+    - pip install xarray==0.17.2 # temporarily downgrade xarray to avoid bug that will be fixed in xbout-0.2.5
     - pytest --pyargs xbout
 
 about:
