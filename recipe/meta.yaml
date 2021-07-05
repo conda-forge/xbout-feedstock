@@ -1,5 +1,5 @@
 {% set name = "xbout" %}
-{% set version = "0.2.4" %}
+{% set version = "0.2.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 2a62b6f53ad35c3f2d99988b2f8236781773608e505646765255e8b8080d1db9
+  sha256: cdb60872c3bc24dfb50312cff99d4f489113a5581a57dd43ac1c97924e304a05
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
