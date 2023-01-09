@@ -1,5 +1,5 @@
 {% set name = "xbout" %}
-{% set version = "0.3.3" %}
+{% set version = "0.3.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: e83473d157c251e9a726ff6371b50318f7043b7ce059581f0081f668aa27a506
+  sha256: 1f8d3730e3ba82643df767275d18407fc668d80dde29ce88075b41acb6019f54
 
 build:
   noarch: python
@@ -16,20 +16,19 @@ build:
 
 requirements:
   host:
-    - python >=3.7.0
+    - python >=3.8.0
     - pip
   run:
-    - python >=3.7.0
-    - xarray >=0.18.0
+    - python >=3.8.0
+    - xarray >=0.18.0,!=2022.9.0,!=2022.10.0,!=2022.11.0,!=2022.12.0
     - boutdata >=0.1.4
     - dask >=2.10.0
     - gelidum >=0.5.3
     - natsort >=5.5.0
-    - matplotlib-base >=3.1.1
+    - matplotlib-base >=3.1.1,!=3.3.0,!=3.3.1,!=3.3.2
     - animatplot >=0.4.2
     - netcdf4 >=1.4.0
     - Pillow >=6.1.0
-    - importlib-metadata
 
 test:
   requires:
