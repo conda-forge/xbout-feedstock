@@ -1,13 +1,13 @@
 {% set name = "xbout" %}
-{% set version = "0.3.6" %}
+{% set version = "0.3.7" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 5b766bce5311ef830dbb6e9ba0a2a0a7629b5e27f615a6f26eb5187933da030d
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 51b6bcc888553037a623f68dccfe7755ca409801d5b2dd1b8b1ecaca78c1eff1
 
 build:
   noarch: python
