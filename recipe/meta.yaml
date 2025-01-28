@@ -1,13 +1,14 @@
 {% set name = "xbout" %}
-{% set version = "0.3.6" %}
+{% set version = "0.3.7" %}
+{% set python_min = "3.8" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 5b766bce5311ef830dbb6e9ba0a2a0a7629b5e27f615a6f26eb5187933da030d
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 51b6bcc888553037a623f68dccfe7755ca409801d5b2dd1b8b1ecaca78c1eff1
 
 build:
   noarch: python
@@ -16,11 +17,12 @@ build:
 
 requirements:
   host:
-    - python >=3.8.0
+    - python {{ python_min }}
     - pip
+    - setuptools
   run:
-    - python >=3.8.0
-    - xarray >=0.18.0,<2022.9.0
+    - python >={{ python_min }}
+    - xarray >=2023.01.0
     - boutdata >=0.1.4
     - dask >=2.10.0
     - gelidum >=0.5.3
@@ -32,6 +34,7 @@ requirements:
 
 test:
   requires:
+    - python {{ python_min }}
     - pytest >=3.3.0
   commands:
     - pytest --pyargs xbout
