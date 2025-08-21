@@ -1,5 +1,5 @@
 {% set name = "xbout" %}
-{% set version = "0.3.7" %}
+{% set version = "0.3.8" %}
 {% set python_min = "3.8" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 51b6bcc888553037a623f68dccfe7755ca409801d5b2dd1b8b1ecaca78c1eff1
+  sha256: 9d17f3425b46304d837dff514b3d1541f85e5de69eaa43629c1806220b4a0b26
 
 build:
   noarch: python
